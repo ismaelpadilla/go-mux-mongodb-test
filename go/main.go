@@ -35,16 +35,16 @@ func mongodbInit() {
 	// mongodb stuff
 	var err error
 
-    // default mongo db url
+	// default mongo db url
 	mongoURL := "mongodb://root:root@localhost:27017/"
 
-    // read mongo db url from environment
+	// read mongo db url from environment
 	if envURL, isSet := os.LookupEnv("MONGODB_URL"); isSet {
 		mongoURL = envURL
 		log.Print("mongo db url read from environment")
 	} else {
-        log.Print("using default mongo db url")
-    }
+		log.Print("using default mongo db url")
+	}
 
 	client, err = mongo.NewClient(options.Client().ApplyURI(mongoURL))
 	if err != nil {
@@ -229,5 +229,5 @@ func DeleteStuffById(w http.ResponseWriter, r *http.Request) {
 // test function
 func TestHandler(w http.ResponseWriter, _ *http.Request) {
 	w.WriteHeader(http.StatusOK)
-    fmt.Fprintf(w, "{\"status\": \"ok\"}")
+	fmt.Fprintf(w, "{\"status\": \"ok\"}")
 }
