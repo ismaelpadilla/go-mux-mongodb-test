@@ -4,6 +4,8 @@ A very basic RESTful API using [gorilla/mux](https://github.com/gorilla/mux) and
 
 There's little to no request validation. Attempting to get an object using an invalid id will result in an error.
 
+There is a sibling repo that uses [Gin](https://github.com/gin-gonic/gin instead of mux: https://github.com/ismaelpadilla/go-mux-mongodb-test
+
 ## Defaults
 * The API runs on port 8080. Try navigating to http://localhost:8080/test
 * Mongo Express runs on port 8081.
