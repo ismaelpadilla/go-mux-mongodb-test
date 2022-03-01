@@ -108,7 +108,7 @@ func GetAllStuff(w http.ResponseWriter, _ *http.Request) {
 	if err != nil {
 		log.Print(err)
 	}
-	var allStuff []bson.M
+	var allStuff []Stuff
 	if err = cursor.All(ctx, &allStuff); err != nil {
 		log.Print(err)
 	}
